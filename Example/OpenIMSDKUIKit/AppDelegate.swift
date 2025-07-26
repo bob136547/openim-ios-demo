@@ -7,17 +7,17 @@ import AlamofireNetworkActivityLogger
 import FirebaseCore
 import FirebaseMessaging
 
-let bussinessPort = ":10008"
+let bussinessPort = ":10008/chat"
 let bussinessRoute = "/chat"
 
-let adminPort = ":10008"
+let adminPort = ":10008/chat"
 let adminRoute = "/chat"
-let sdkAPIPort = ":10002"
+let sdkAPIPort = ":10002/api"
 let sdkAPIRoute = "/api"
-let sdkWSPort = ":10001"
+let sdkWSPort = ":10003/msg_gateway"
 let sdkWSRoute = "/msg_gateway"
 
-let defaultHost = "your-server-ip"
+let defaultHost = "116.205.141.74"
 
 let discoverPageURL = "https://docs.openim.io/"
 let allowSendMsgNotFriend = "1"
@@ -81,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let language = Localize.currentLanguage()
         Localize.setCurrentLanguage(language)
         
-        let isIP = isValidIPAddress(defaultHost)
+        let isIP = true // isValidIPAddress(defaultHost)
 
         let enableTLS = !isIP ? true : false
         
